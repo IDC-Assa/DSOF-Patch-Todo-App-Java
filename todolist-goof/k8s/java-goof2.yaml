@@ -19,6 +19,12 @@ spec:
       containers:
       - image: ${DOCKER_ACCOUNT}/java-goof:latest
         imagePullPolicy: Always
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 15
         name: java-goof
         securityContext:
           allowPrivilegeEscalation: false
