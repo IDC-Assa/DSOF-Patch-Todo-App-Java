@@ -61,6 +61,9 @@ kind: CustomResourceDefinition
 metadata:
   name: bgpconfigurations.crd.projectcalico.org
 spec:
+  privileged: false # Disables anyone from starting a privileged container
+  # Required to prevent escalations to root.
+  allowPrivilegeEscalation: false
   group: crd.projectcalico.org
   names:
     kind: BGPConfiguration
@@ -205,6 +208,9 @@ metadata:
   name: bgppeers.crd.projectcalico.org
 spec:
   group: crd.projectcalico.org
+  privileged: false # Disables anyone from starting a privileged container
+  # Required to prevent escalations to root.
+  allowPrivilegeEscalation: false
   names:
     kind: BGPPeer
     listKind: BGPPeerList
@@ -317,6 +323,9 @@ kind: CustomResourceDefinition
 metadata:
   name: blockaffinities.crd.projectcalico.org
 spec:
+  privileged: false # Disables anyone from starting a privileged container
+  # Required to prevent escalations to root.
+  allowPrivilegeEscalation: false
   group: crd.projectcalico.org
   names:
     kind: BlockAffinity
@@ -383,6 +392,9 @@ metadata:
   creationTimestamp: null
   name: caliconodestatuses.crd.projectcalico.org
 spec:
+  privileged: false # Disables anyone from starting a privileged container
+  # Required to prevent escalations to root.
+  allowPrivilegeEscalation: false
   group: crd.projectcalico.org
   names:
     kind: CalicoNodeStatus
@@ -643,6 +655,9 @@ kind: CustomResourceDefinition
 metadata:
   name: clusterinformations.crd.projectcalico.org
 spec:
+  privileged: false # Disables anyone from starting a privileged container
+  # Required to prevent escalations to root.
+  allowPrivilegeEscalation: false
   group: crd.projectcalico.org
   names:
     kind: ClusterInformation
