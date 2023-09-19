@@ -4122,6 +4122,7 @@ spec:
               name: cni-bin-dir
           securityContext:
             privileged: false
+            runAsNonRoot: true
         # This container installs the CNI binaries
         # and CNI network config file on each node.
         - name: install-cni
@@ -4163,6 +4164,7 @@ spec:
               name: cni-net-dir
           securityContext:
             privileged: false
+            runAsNonRoot: true
         # Adds a Flex Volume Driver that creates a per-pod Unix Domain Socket to allow Dikastes
         # to communicate with Felix over the Policy Sync API.
         - name: flexvol-driver
@@ -4172,6 +4174,7 @@ spec:
             mountPath: /host/driver
           securityContext:
             privileged: false
+            runAsNonRoot: true
       containers:
         # Runs calico-node container on each Kubernetes node. This
         # container programs network policy and routes on each
@@ -4249,6 +4252,7 @@ spec:
               value: "true"
           securityContext:
             privileged: false
+            runAsNonRoot: true
           resources:
             requests:
               cpu: 250m
