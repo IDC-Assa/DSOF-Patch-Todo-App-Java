@@ -57,4 +57,4 @@ spec:
   selector:
     app: goof
   loadBalancerSourceRanges:
-        - 103.21.244.0/22
+    - 103.21.244.0/22
