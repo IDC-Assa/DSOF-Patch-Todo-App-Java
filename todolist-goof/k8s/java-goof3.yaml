@@ -47,15 +47,14 @@ spec:
             name: tomcat-work
           - mountPath: /usr/local/tomcat/logs
             name: tomcat-logs
-      volumes:
-          - name: tomcat-temp
-            emptyDir: {}
-          - name: tomcat-work
-            emptyDir: {}
-          - name: tomcat-logs
-            emptyDir: {}
       restartPolicy: Always
-      
+      volumes:
+        - name: tomcat-temp
+            emptyDir: {}
+        - name: tomcat-work
+            emptyDir: {}
+        - name: tomcat-logs
+            emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
