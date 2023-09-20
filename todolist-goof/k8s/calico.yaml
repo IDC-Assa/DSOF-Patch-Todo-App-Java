@@ -4124,6 +4124,7 @@ spec:
             privileged: false
             runAsNonRoot: true
             runAsUser: 65534
+            readOnlyRootFilesystem: false
             allowPrivilegeEscalation: false
             capabilities:
               drop:
@@ -4172,6 +4173,7 @@ spec:
             privileged: false
             runAsNonRoot: true
             runAsUser: 65534
+            readOnlyRootFilesystem: false
             allowPrivilegeEscalation: false
             capabilities:
               drop:
@@ -4188,6 +4190,7 @@ spec:
             privileged: false
             runAsNonRoot: true
             runAsUser: 65534
+            readOnlyRootFilesystem: false
             allowPrivilegeEscalation: false
             capabilities:
               drop:
@@ -4272,6 +4275,7 @@ spec:
             privileged: false
             runAsNonRoot: true
             runAsUser: 65534
+            readOnlyRootFilesystem: false
             allowPrivilegeEscalation: false
             capabilities:
               drop:
@@ -4451,7 +4455,7 @@ spec:
             runAsNonRoot: true
             runAsUser: 65534 #nobody
             runAsGroup: 65534 #nobody
-            readOnlyRootFilesystem: true
+            readOnlyRootFilesystem: false
             capabilities:
               drop:
                 - ALL
