@@ -24,7 +24,7 @@ spec:
               port: 80
             initialDelaySeconds: 10
             periodSeconds: 15
-          resources:
+        resources:
             limits:
               memory: "200Mi"
               cpu: "700m"
@@ -40,7 +40,7 @@ spec:
             add: ['NET_BIND_SERVICE']
         imagePullPolicy: Always
         name: java-goof
-      restartPolicy: Always
+        restartPolicy: Always
 ---
 apiVersion: v1
 kind: Service
