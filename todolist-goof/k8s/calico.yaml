@@ -4123,6 +4123,7 @@ spec:
           securityContext:
             privileged: false
             runAsNonRoot: true
+            runAsUser: 65534
             allowPrivilegeEscalation: false
             capabilities:
               drop:
@@ -4170,6 +4171,7 @@ spec:
           securityContext:
             privileged: false
             runAsNonRoot: true
+            runAsUser: 65534
             allowPrivilegeEscalation: false
             capabilities:
               drop:
@@ -4185,6 +4187,7 @@ spec:
           securityContext:
             privileged: false
             runAsNonRoot: true
+            runAsUser: 65534
             allowPrivilegeEscalation: false
             capabilities:
               drop:
@@ -4268,6 +4271,7 @@ spec:
           securityContext:
             privileged: false
             runAsNonRoot: true
+            runAsUser: 65534
             allowPrivilegeEscalation: false
             capabilities:
               drop:
