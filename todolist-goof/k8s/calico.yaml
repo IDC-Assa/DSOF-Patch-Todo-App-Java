@@ -4139,6 +4139,7 @@ spec:
         # and CNI network config file on each node.
         - name: install-cni
           image: docker.io/calico/cni:v3.21.2
+          imagePullPolicy: Always
           command: ["/opt/cni/bin/install"]
           resources:
             limits:
@@ -4192,6 +4193,7 @@ spec:
         # to communicate with Felix over the Policy Sync API.
         - name: flexvol-driver
           image: docker.io/calico/pod2daemon-flexvol:v3.21.2
+          imagePullPolicy: Always
           resources:
             limits:
               memory: "200Mi"
@@ -4215,6 +4217,7 @@ spec:
         # host.
         - name: calico-node
           image: docker.io/calico/node:v3.21.2
+          imagePullPolicy: Always
           resources:
             limits:
               memory: "200Mi"
@@ -4443,6 +4446,7 @@ spec:
       containers:
         - name: calico-kube-controllers
           image: docker.io/calico/kube-controllers:v3.21.2
+          imagePullPolicy: Always
           resources:
             limits:
               memory: "200Mi"
