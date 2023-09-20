@@ -47,7 +47,7 @@ spec:
             name: tomcat-work
           - mountPath: /usr/local/tomcat/logs
             name: tomcat-logs
-        volumes:
+      volumes:
           - name: tomcat-temp
             emptyDir: {}
           - name: tomcat-work
