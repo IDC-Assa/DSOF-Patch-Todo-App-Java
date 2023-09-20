@@ -20,17 +20,8 @@ spec:
       - image: ${DOCKER_ACCOUNT}/java-goof:latest
         imagePullPolicy: Always
         name: java-goof
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 10
-          periodSeconds: 15
-        resources:
-          limits:
-            memory: "200Mi"
-            cpu: "700m
         securityContext:
+          readOnlyRootFilesystem: true
           allowPrivilegeEscalation: false
           runAsNonRoot: true
           runAsUser: 65534 #nobody
@@ -50,11 +41,11 @@ spec:
       restartPolicy: Always
       volumes:
         - name: tomcat-temp
-            emptyDir: {}
+          emptyDir: {}
         - name: tomcat-work
-            emptyDir: {}
+          emptyDir: {}
         - name: tomcat-logs
-            emptyDir: {}
+          emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
